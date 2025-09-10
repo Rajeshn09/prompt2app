@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Premium monochrome design system */
+    --background: 0 0% 100%;  /* Pure white */
+    --foreground: 0 0% 6.7%;  /* Near black #111111 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 6.7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 6.7%;
+
+    --primary: 0 0% 0%;  /* Pure black */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96.1%;  /* #F5F5F5 */
+    --secondary-foreground: 0 0% 40%;  /* #666666 */
+
+    --muted: 0 0% 89.8%;  /* #E5E5E5 */
+    --muted-foreground: 0 0% 40%;  /* #666666 */
+
+    --accent: 0 0% 96.1%;  /* #F5F5F5 */
+    --accent-foreground: 0 0% 6.7%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 89.8%;  /* #E5E5E5 */
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 0%;  /* Pure black focus ring */
+
+    /* Accent colors for feedback and highlights */
+    --blue-accent: 219 95% 59%;  /* #3B82F6 electric blue */
+    --green-accent: 166 78% 40%;  /* #10B981 mint green */
+    --yellow-accent: 41 96% 54%;  /* #FACC15 soft yellow */
+
+    /* Glass/overlay effects */
+    --glass-bg: 0 0% 100%;
+    --glass-border: 0 0% 89.8%;
+
+    --radius: 0.375rem;  /* Slightly smaller radius for sharper look */
+
+    --sidebar-background: 0 0% 96.1%;
+    --sidebar-foreground: 0 0% 6.7%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 89.8%;
+    --sidebar-accent-foreground: 0 0% 6.7%;
+    --sidebar-border: 0 0% 89.8%;
+    --sidebar-ring: 0 0% 0%;
+  }
+
+  .dark {
+    --background: 0 0% 6.7%;  /* #111111 */
+    --foreground: 0 0% 100%;  /* Pure white */
+
+    --card: 0 0% 0%;  /* Pure black */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;  /* White primary in dark mode */
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 14%;  /* Dark secondary */
+    --secondary-foreground: 0 0% 89.8%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 0 0% 14%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 100%;  /* White focus ring in dark mode */
+
+    /* Accent colors remain the same */
+    --blue-accent: 219 95% 59%;
+    --green-accent: 166 78% 40%;
+    --yellow-accent: 41 96% 54%;
+
+    --glass-bg: 0 0% 6.7%;
+    --glass-border: 0 0% 20%;
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+}
